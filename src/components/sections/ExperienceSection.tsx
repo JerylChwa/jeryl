@@ -16,9 +16,9 @@ export function ExperienceSection() {
   if (experience.length === 0) return null;
 
   return (
-    <section id="experience" className="border-t border-gray-100 py-20">
+    <section id="experience" className="py-20">
       <div className="mx-auto max-w-4xl px-6">
-        <h2 className="mb-10 text-2xl font-bold text-primary">Experience</h2>
+        <h2 className="mb-10 text-2xl font-bold text-primary dark:text-dark-primary">Experience</h2>
         <div className="space-y-10">
           {experience.map((exp) => (
             <div key={exp.id} className="relative border-l-2 border-accent/20 pl-6">
@@ -28,15 +28,15 @@ export function ExperienceSection() {
                   <img
                     src={exp.logo_url}
                     alt={exp.company}
-                    className="h-9 w-9 shrink-0 rounded-lg border border-gray-100 bg-white object-contain p-1 shadow-sm"
+                    className="h-9 w-9 shrink-0 rounded-lg border border-gray-100 bg-white object-contain p-1 shadow-sm dark:border-dark-border dark:bg-dark-surface"
                   />
                 )}
                 <div>
                   <h3 className="text-lg font-semibold">{exp.role}</h3>
-                  <span className="text-sm text-muted">{exp.company}</span>
+                  <span className="text-sm text-muted dark:text-dark-muted">{exp.company}</span>
                 </div>
               </div>
-              <p className="mt-1 text-sm text-muted">
+              <p className="mt-1 text-sm text-muted dark:text-dark-muted">
                 {formatDate(exp.start_date)} — {exp.end_date ? formatDate(exp.end_date) : "Present"}
               </p>
               <div className="mt-3">

@@ -13,9 +13,9 @@ export function ProjectsSection() {
   if (projects.length === 0) return null;
 
   return (
-    <section id="projects" className="border-t border-gray-100 py-20">
+    <section id="projects" className="py-20">
       <div className="mx-auto max-w-4xl px-6">
-        <h2 className="mb-10 text-2xl font-bold text-primary">Projects</h2>
+        <h2 className="mb-10 text-2xl font-bold text-primary dark:text-dark-primary">Projects</h2>
         <div className="grid gap-6 sm:grid-cols-2">
           {projects.map((project) => (
             <Card key={project.id}>
@@ -26,7 +26,7 @@ export function ProjectsSection() {
                   className="mb-4 h-40 w-full rounded-lg object-cover"
                 />
               )}
-              <h3 className="text-lg font-semibold">{project.title}</h3>
+              <h3 className="text-lg font-semibold dark:text-dark-primary">{project.title}</h3>
               <div className="mt-2">
                 <MarkdownRenderer content={project.description} />
               </div>
