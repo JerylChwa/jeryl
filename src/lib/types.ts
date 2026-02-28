@@ -11,6 +11,7 @@ export interface Experience {
   id: string;
   company: string;
   role: string;
+  logo_url: string | null;
   start_date: string;
   end_date: string | null;
   description: string;

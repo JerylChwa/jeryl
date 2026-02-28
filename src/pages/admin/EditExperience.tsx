@@ -7,6 +7,7 @@ import { MarkdownRenderer } from "../../components/ui/MarkdownRenderer";
 const EMPTY_EXPERIENCE: Omit<Experience, "id" | "created_at" | "updated_at"> = {
   company: "",
   role: "",
+  logo_url: null,
   start_date: "",
   end_date: null,
   description: "",
@@ -44,6 +45,7 @@ export function EditExperience() {
     const payload = {
       company: editing.company,
       role: editing.role,
+      logo_url: editing.logo_url || null,
       start_date: editing.start_date,
       end_date: editing.end_date || null,
       description: editing.description,
@@ -122,6 +124,18 @@ export function EditExperience() {
                 className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm outline-none focus:border-accent focus:ring-2 focus:ring-accent/20"
               />
             </div>
+          </div>
+          <div>
+            <label className="mb-1 block text-sm font-medium text-gray-700">Company Logo URL</label>
+            <input
+              value={editing.logo_url ?? ""}
+              onChange={(e) => setEditing({ ...editing, logo_url: e.target.value || null })}
+              placeholder="https://..."
+              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm outline-none focus:border-accent focus:ring-2 focus:ring-accent/20"
+            />
+            {editing.logo_url && (
+              <img src={editing.logo_url} alt="Logo preview" className="mt-2 h-10 w-10 rounded object-contain" />
+            )}
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
