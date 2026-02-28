@@ -16,9 +16,9 @@ export function ExperienceSection() {
   if (experience.length === 0) return null;
 
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="py-4">
       <div className="mx-auto max-w-4xl px-6">
-        <h2 className="mb-10 text-2xl font-bold text-primary dark:text-dark-primary">Experience</h2>
+        <h2 className="mb-8 text-2xl font-bold text-primary dark:text-dark-primary">Experience</h2>
         <div className="space-y-10">
           {experience.map((exp) => (
             <div key={exp.id} className="relative border-l-2 border-accent/20 pl-6">

@@ -17,7 +17,7 @@ export function IntroSection() {
   );
 
   return (
-    <section id="intro" className="py-20">
+    <section id="intro" className="pt-12 pb-4">
       <div className="mx-auto max-w-4xl px-6">
         <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center">
           {profile.avatar_url && (
@@ -32,7 +32,7 @@ export function IntroSection() {
             <p className="mt-1 text-lg text-muted dark:text-dark-muted">{profile.tagline}</p>
           </div>
         </div>
-        <div className="mt-8">
+        <div className="mt-6">
           <MarkdownRenderer content={profile.bio} />
         </div>
       </div>

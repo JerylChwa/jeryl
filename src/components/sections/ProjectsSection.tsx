@@ -13,7 +13,7 @@ export function ProjectsSection() {
   if (projects.length === 0) return null;
 
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-4">
       <div className="mx-auto max-w-4xl px-6">
         <h2 className="mb-10 text-2xl font-bold text-primary dark:text-dark-primary">Projects</h2>
         <div className="grid gap-6 sm:grid-cols-2">
