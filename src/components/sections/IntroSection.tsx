@@ -10,7 +10,7 @@ export function IntroSection() {
   if (error) return <ErrorMessage message={error} />;
   if (!profile) return (
     <section id="intro" className="py-20">
-      <div className="mx-auto max-w-4xl px-6 text-center text-muted">
+      <div className="mx-auto max-w-4xl px-6 text-center text-muted dark:text-dark-muted">
         <p>No intro yet. Add one from the <a href="/admin/intro" className="text-accent underline">admin dashboard</a>.</p>
       </div>
     </section>
@@ -28,8 +28,8 @@ export function IntroSection() {
             />
           )}
           <div>
-            <h1 className="text-3xl font-bold text-primary">{profile.name}</h1>
-            <p className="mt-1 text-lg text-muted">{profile.tagline}</p>
+            <h1 className="text-3xl font-bold text-primary dark:text-dark-primary">{profile.name}</h1>
+            <p className="mt-1 text-lg text-muted dark:text-dark-muted">{profile.tagline}</p>
           </div>
         </div>
         <div className="mt-8">

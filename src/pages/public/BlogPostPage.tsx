@@ -34,7 +34,7 @@ export function BlogPostPage() {
   );
   if (!post) return (
     <div className="mx-auto max-w-3xl px-6 py-16">
-      <p className="text-muted">Post not found.</p>
+      <p className="text-muted dark:text-dark-muted">Post not found.</p>
       <Link to="/blog" className="mt-4 inline-block text-accent hover:text-accent-light">
         &larr; Back to blog
       </Link>
@@ -43,7 +43,7 @@ export function BlogPostPage() {
 
   return (
     <article className="mx-auto max-w-3xl px-6 py-16">
-      <Link to="/blog" className="mb-6 inline-block text-sm text-muted hover:text-primary">
+      <Link to="/blog" className="mb-6 inline-block text-sm text-muted hover:text-primary dark:text-dark-muted dark:hover:text-dark-primary">
         &larr; Back to blog
       </Link>
       {post.cover_image_url && (
@@ -53,10 +53,10 @@ export function BlogPostPage() {
           className="mb-8 h-64 w-full rounded-xl object-cover"
         />
       )}
-      <h1 className="text-3xl font-bold text-primary">{post.title}</h1>
+      <h1 className="text-3xl font-bold text-primary dark:text-dark-primary">{post.title}</h1>
       <div className="mt-2 flex flex-wrap items-center gap-3">
         {post.published_at && (
-          <span className="text-sm text-muted">{formatDate(post.published_at)}</span>
+          <span className="text-sm text-muted dark:text-dark-muted">{formatDate(post.published_at)}</span>
         )}
         {post.tags.map((tag) => (
           <Badge key={tag}>{tag}</Badge>

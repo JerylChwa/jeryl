@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ThemeContext, useThemeProvider } from "./hooks/useTheme";
 import { Navbar } from "./components/layout/Navbar";
 import { Footer } from "./components/layout/Footer";
 import { Spinner } from "./components/ui/Spinner";
@@ -40,7 +41,10 @@ function PublicLayout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+  const themeValue = useThemeProvider();
+
   return (
+    <ThemeContext.Provider value={themeValue}>
     <BrowserRouter>
       <Suspense fallback={<Spinner />}>
         <Routes>
@@ -82,5 +86,6 @@ export default function App() {
         </Routes>
       </Suspense>
     </BrowserRouter>
+    </ThemeContext.Provider>
   );
 }
