@@ -23,15 +23,18 @@ export function ExperienceSection() {
           {experience.map((exp) => (
             <div key={exp.id} className="relative border-l-2 border-accent/20 pl-6">
               <div className="absolute -left-[7px] top-1 h-3 w-3 rounded-full bg-accent" />
-              <div className="flex flex-wrap items-center gap-x-3">
-                <h3 className="text-lg font-semibold">{exp.role}</h3>
-                <span className="flex items-center gap-1.5 text-muted">
-                  @
-                  {exp.logo_url && (
-                    <img src={exp.logo_url} alt={exp.company} className="inline-block h-5 w-5 rounded object-contain" />
-                  )}
-                  {exp.company}
-                </span>
+              <div className="flex items-center gap-3">
+                {exp.logo_url && (
+                  <img
+                    src={exp.logo_url}
+                    alt={exp.company}
+                    className="h-9 w-9 shrink-0 rounded-lg border border-gray-100 bg-white object-contain p-1 shadow-sm"
+                  />
+                )}
+                <div>
+                  <h3 className="text-lg font-semibold">{exp.role}</h3>
+                  <span className="text-sm text-muted">{exp.company}</span>
+                </div>
               </div>
               <p className="mt-1 text-sm text-muted">
                 {formatDate(exp.start_date)} — {exp.end_date ? formatDate(exp.end_date) : "Present"}
