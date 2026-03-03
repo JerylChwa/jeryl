@@ -59,3 +59,41 @@ body {
 .dark .prose code { @apply bg-dark-surface text-gray-200; }
 .dark .prose pre { @apply bg-dark-surface; }
 .dark .prose blockquote { @apply text-gray-400; }
+
+/* Force light mode in admin pages */
+.admin-force-light,
+.admin-force-light * {
+  color-scheme: light;
+}
+
+.dark .admin-force-light {
+  @apply bg-white text-gray-900;
+}
+
+.dark .admin-force-light .bg-surface {
+  @apply bg-surface;
+}
+
+.dark .admin-force-light .text-primary {
+  color: #1a1a2e;
+}
+
+.dark .admin-force-light .text-muted {
+  color: #64748b;
+}
+
+.dark .admin-force-light .border-gray-100 {
+  border-color: #f1f5f9;
+}
+
+.dark .admin-force-light .border-gray-200 {
+  border-color: #e2e8f0;
+}
+
+.dark .admin-force-light .hover\:bg-gray-100:hover {
+  background-color: #f1f5f9;
+}
+
+.dark .admin-force-light .hover\:bg-gray-50:hover {
+  background-color: #f8fafc;
+}

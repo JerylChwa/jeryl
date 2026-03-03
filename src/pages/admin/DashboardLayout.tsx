@@ -10,9 +10,9 @@ export function DashboardLayout() {
   if (!user) return <Navigate to="/admin/login" replace />;
 
   return (
-    <div className="flex min-h-screen">
+    <div className="admin-force-light flex min-h-screen bg-white text-gray-900">
       <AdminSidebar onSignOut={signOut} />
-      <main className="flex-1 overflow-y-auto bg-white p-8">
+      <main className="flex-1 overflow-y-auto p-8">
         <Outlet />
       </main>
     </div>
