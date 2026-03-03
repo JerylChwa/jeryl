@@ -5,7 +5,6 @@ import { Navbar } from "./components/layout/Navbar";
 import { Footer } from "./components/layout/Footer";
 import { Spinner } from "./components/ui/Spinner";
 import { HomePage } from "./pages/public/HomePage";
-import { BlogListPage } from "./pages/public/BlogListPage";
 import { BlogPostPage } from "./pages/public/BlogPostPage";
 
 const LoginPage = lazy(() =>
@@ -54,14 +53,6 @@ export default function App() {
             element={
               <PublicLayout>
                 <HomePage />
-              </PublicLayout>
-            }
-          />
-          <Route
-            path="/blog"
-            element={
-              <PublicLayout>
-                <BlogListPage />
               </PublicLayout>
             }
           />

@@ -2,15 +2,13 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "../../hooks/useTheme";
 
-const NAV_LINKS = [
-  { label: "Home", to: "/" },
-  { label: "Blog", to: "/blog" },
-];
+const NAV_LINKS: { label: string; to: string }[] = [];
 
 const SECTION_LINKS = [
   { label: "Intro", to: "/#intro" },
   { label: "Experience", to: "/#experience" },
   { label: "Projects", to: "/#projects" },
+  { label: "Blog", to: "/#blog" },
 ];
 
 export function Navbar() {
